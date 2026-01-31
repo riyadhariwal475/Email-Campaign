@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance Calendar</title>
+<style>
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #0b3a5a;
+  }
+
+.data-table th {
+  background-color: #0b3a5a;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 8px;
+ }
+
+.data-table td {
+  background-color: #eef6fb;
+  color: #000000;
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 8px 0 8px 8px;
+ }
+  
+    body {
+      margin: 0;
+      padding: 0;
+font-family: Helvetica, Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .phase {
+      background-color: #0b3a5a;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      margin-bottom: 14px;
+      font-size: 24px;
+      color: #ffffff;
+      border-radius: 8px;
+}
+    .info-box {
+      background-color: #eef6fb;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 19px;
+      margin-bottom: 12px;
+      color: black;
+      border: 1px solid #0b3a5a;
+    }
+.section-title {
+      padding: 6px;
+      font-size: 24px;
+      margin-bottom: 2px;
+      color: #0b3a5a;
+    }
+
+.card {
+  border-radius: 8px;
+   background-color: #0b3a5a;
+}
+
+.due {
+  padding-left: 12px;
+  padding-top: 6px;
+  font-weight: 700;
+  font-size: 26px;
+  margin-top: 8px;
+  color: #eef8eb;
+}
+
+.card-divider {
+  border: none;
+  height: 1px;
+  background-color: #eef8eb;
+  margin-top: 2px;
+}
+
+.card-title {
+  padding-left: 12px;
+  font-size: 21px;
+  font-weight: 650;
+  margin-bottom: 3px;
+  color: #ffffff;
+}
+
+.card-content {
+ font-size: 19px;
+  line-height: 1.2;
+  height: 100%;
+  color: #ffffff;
+  padding-left: 12px;
+  padding-right:3px;
+  padding-bottom:6px;
+}
+.date {
+font-size: 17px;
+  line-height: 1.2;
+  height: 100%;
+  color: #ffffff;
+  padding-left: 12px;
+  padding-right:3px;
+  padding-bottom:6px;
+  }
+
+    /* MOBILE */
+    @media screen and (max-width: 800px) {
+      .stack {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 10px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- Tracking Pixel -->
+<img 
+  src="https://n8n-jjba.onrender.com/webhook/jan-open-it?mail={{ $json.EMail }}" 
+  width="1" 
+  height="1" 
+  border="0"
+  alt=""
+  style="display:block; width:1px; height:1px;" 
+/>
+<!-- Tracking Pixel code end -->
+ 
+<table class="container" width="800" cellpadding="0" cellspacing="0" role="presentation">
+
+    <!-- Intro -->
+  <tr>
+    <td style="font-size:20px; line-height:1.2; padding-bottom:12px;">
+      To,<br>
+     {{ $json['Company Name'] }}<br><br>
+     Congratulations on successful incorporation!<br><br>Besides ROC <b>(which we covered last week),</b> there is another set of compliances, newly registered companies need to file - Income Tax, Advance Tax and TDS.<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <div class="phase">Income Tax Calendar</div>
+    </td>
+  </tr>
+ <tr>
+    <td>
+      <div class="info-box"><b>Applicability: </b>Private Companies<br>
+      <b>Act: </b>Income Tax Act</div>
+    </td>
+  </tr>
+
+  <!-- Cards -->
+  <tr>
+    <td>
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+
+        <!-- ROW 1 -->
+  <tr>
+         <td class="stack" width="50%" valign="top" style="padding:4px;">
+  <div class="card">
+    <div class="due">Oct 31</div>
+    <hr class="card-divider">
+    <div class="card-title">Income Tax Return (ITR-6)</div>
+    <div class="card-content">
+      A mandatory report to the Tax department detailing its annual income, expenses, profits, and taxes paid.
+    </div><br>
+    <div class="date"><i><b>Exception: </b>If company claims exemption under Section 11 for charitable/religious purposes.</i></div>
+  </div>
+</td>
+<td class="stack" width="50%" valign="top" style="padding:4px;">
+  <div class="card">
+    <div class="due">Sep 30</div>
+    <hr class="card-divider">
+    <div class="card-title">Tax Audit</div>
+    <div class="card-content">
+     <b>Applicability: </b>Turnover/gross receipts exceed ₹1 Crore in a financial year.
+    </div><br><br>
+    <div class="date"><i><b>Exception: </b>If 95%+ of total receipts/payments is digital, turnover/gross receipts exceed to ₹10 Crore.</i></div>
+  </div>
+</td>
+</table>
+
+        </tr>     
+<tr>
+    <td>
+      <div class="section-title">
+        <strong>Advance Tax Deadlines</strong></div>
+    </td>
+  </tr>
+  
+  
+  <tr>
+  <td style="padding:8px 0;">
+    <table class="data-table" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+
+      <tr>
+        <th width="38%">Installments<br>(on or before)</th>
+        <th width="62%">% of Tax Liability</th>
+      </tr>
+
+      <tr>
+        <td>15th June</td>
+        <td>15% of the total estimated tax</td>
+      </tr>
+
+      <tr>
+        <td>15th September</td>
+        <td>
+          45% of the total estimated tax (cumulative)
+        </td>
+      </tr>
+
+      <tr>
+        <td>15th December</td>
+        <td>
+         75% of the total estimated tax (cumulative)
+        </td>
+      </tr>
+
+      <tr>
+        <td>15th March</td>
+        <td>100% of the total estimated tax (cumulative)</td>
+      </tr>
+
+    </table>
+    <tr>
+    <td>
+      <div class="info-box">
+        <i><b>Applicability: </b></i>If total tax liability exceed ₹10,000</div>
+    </td>
+  </tr>
+  </td>
+</tr>
+  
+
+  <!-- Intro -->
+  <tr>
+    <td>
+      <div class="section-title"><strong>TDS Deposit</strong></div>
+    </td>
+  </tr>
+
+  <!-- Cards -->
+  <tr>
+    <td>
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+
+        <!-- ROW 1 -->
+  <tr>
+         <td class="stack" width="50%" valign="top" style="padding:4px;">
+  <div class="card">
+    <div class="due">7th of every month</div>
+    <hr class="card-divider">
+    <div class="card-content">
+      TDS deducted in given month should be deposited by 7th of the next month.
+    </div><br>
+    <div class="date"><i><b>Exception: </b>TDS deducted in March can be deposited by 30th April</i></div>
+  </div>
+</td>
+</tr>     
+</table>
+<tr>
+    <td>
+      <div class="section-title">
+        <strong>TDS Return</strong><br>
+             </div>
+    </td>
+  </tr>
+  
+
+  
+  <tr>
+  <td style="padding:8px 0;">
+    <table class="data-table" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+
+      <tr>
+        <th width="38%">Due Date</th>
+        <th width="62%">Time Period</th>
+      </tr>
+
+      <tr>
+        <td>31st July</td>
+        <td>Q1 April-June</td>
+      </tr>
+
+      <tr>
+        <td>31st October</td>
+        <td>Q2 July-September</td>
+      </tr>
+
+      <tr>
+         <td><b style="color: #0b3a5a;">31st January</b></td>
+        <td><b style="color: #0b3a5a;">Q3 October-December</b></td>
+      </tr>
+
+      <tr>
+        <td>31st May</td>
+        <td>Q4 January-March</td>
+      </tr>
+
+    </table>
+  </td>
+</tr>
+  
+ <!-- DISCLAIMER LINE ABOVE FOOTER -->
+<tr>
+  <td align="left" style="padding:12px 2px 0 5px;">
+    <p style="
+      margin:0;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size:1.2em;
+      text-align:left;
+      line-height:1.5;
+    ">
+      <b>P.S.</b> We keep it simple, one email every week in January to help you complete each compliance. <br><b>Next up:</b> GST Calendar. <br>Reply <u><b><a href="mailto:support@bkkhemka.com?subject=Unsubscribe%20from%20Compliance%20Calendar&body=Hello%20Team%20BK%20Khemka%20%26%20Co.%2C%0D%0AI%20would%20like%20to%20unsubscribe%20from%20the%20Compliance%20Calendar.%0D%0AThank%20you." style="color:#000000; text-decoration:none;">
+  here</a></b></u> if you wish to unsubscribe.</p>
+    <p style="
+  margin:0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:1.2em;
+  color:#9a9a9a;
+  text-align:left;
+  line-height:1.5;
+">
+</p>
+  </td>
+</tr><br>
+<!-- FOOTER -->
+<tr>
+  <td align="center" style="padding:24px 20px 18px 20px;">
+
+    <!-- Firm Name -->
+    <p style="
+      margin:0 0 6px 0;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      font-size:20px;
+      font-weight:600;
+      text-align:center;
+    ">
+      B.K. Khemka &amp; Co.
+    </p>
+    <!-- Blue Label -->
+    <span style="
+      display:inline-block;
+      margin:0 0 12px 0;
+      padding:6px 14px;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      font-size:15px;
+      font-weight:500;
+      color:#ffffff;
+      background-color: #0b3a5a;
+    ">
+      New age Chartered Accountants
+    </span>
+    <!-- Contact Line -->
+    <p style="
+      margin:0;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      font-size:15px;
+      color:#000000;
+      text-align:center;
+      line-height:1.6;
+    ">
+      <a href="https://bkkhemka.com/?utm_source=client_email&utm_medium=email&utm_campaign=new_year_2026" style="color:#000000;">bkkhemka.com&nbsp;</a>|&nbsp;support@bkkhemka.com&nbsp;|&nbsp;+91&nbsp;97484&nbsp;28538
+    </p>
+  </td>
+</tr>
+</td>
+</tr>
+</table>
+</body>
+</html>
